@@ -1,0 +1,28 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"target": "ES2015",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"types": ["node"],
+		"outDir": "./dist",
+		"rootDir": "./",
+		"skipLibCheck": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"esModuleInterop": true,
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"isolatedModules": true,
+		"incremental": true,
+		"baseUrl": "./dist",
+		"declaration": true,
+		"paths": {
+			"@angular/*": ["node_modules/@angular/*"]
+		},
+		"composite": true
+	},
+	"angularCompilerOptions": {
+		"preserveSymlinks": true
+	},
+	"include": ["constants/**/*", "ng/**/*", "index.ts"]
+}

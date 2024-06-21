@@ -1,0 +1,47 @@
+{
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"version": 1,
+	"newProjectRoot": "projects",
+	"defaultProject": "shared",
+	"projects": {
+		"shared": {
+			"projectType": "library",
+			"root": "",
+			"prefix": "shared",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-ng-packagr:build",
+					"options": {
+						"tsConfig": "tsconfig.json",
+						"project": "ng-package.json"
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": ["tsconfig.json"],
+						"exclude": ["**/node_modules/**"]
+					}
+				}
+			}
+		}
+	},
+	"cli": {
+		"schematicCollections": ["@ionic/angular-toolkit"],
+		"analytics": "8542fc56-1bde-43db-a374-3d9d7e09fc05"
+	},
+	"schematics": {
+		"@ionic/angular-toolkit:component": {
+			"styleext": "scss"
+		},
+		"@ionic/angular-toolkit:page": {
+			"styleext": "scss"
+		},
+		"@angular-eslint/schematics:application": {
+			"setParserOptionsProject": true
+		},
+		"@angular-eslint/schematics:library": {
+			"setParserOptionsProject": true
+		}
+	}
+}

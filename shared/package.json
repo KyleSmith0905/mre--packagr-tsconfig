@@ -1,0 +1,19 @@
+{
+	"name": "shared",
+	"version": "0.0.1",
+	"scripts": {
+		"build": "ng build"
+	},
+	"peerDependencies": {
+		"@angular/core": "^18.0.4"
+	},
+	"dependencies": {
+		"tslib": "^2.6.3"
+	},
+	"devDependencies": {
+		"@angular-devkit/build-ng-packagr": "^0.1002.0",
+		"@angular/cli": "^18.0.5",
+		"ng-packagr": "^18.0.0",
+		"typescript": "5.4.5"
+	}
+}
